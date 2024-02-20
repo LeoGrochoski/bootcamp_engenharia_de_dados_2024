@@ -94,7 +94,7 @@ print(f'A temperatura de {celcius}° Celcius, é de {fahrenheit:.2f}° Fahrenhei
 print('Exercicio 5 - Calculo de área de círculo')
 raio = float(input('Digite o raio do circulo '))
 area = 3.142 * (raio * raio)
-print(f'A area o circulo é: {area}')
+print(f'A area o circulo é: {area:.2f}')
 
 #Strings (str)
 
@@ -102,28 +102,34 @@ print(40*'-')
 print('      Exericicios do Tipo Str          ')
 print(40*'-')
 
-
 # 1 - Escreva um programa que receba uma string do usuário e a converta para maiúsculas.
 
+print('Exercicio 1 - Exibindo input em letras maisculas')
 nome_usuario = input('Digite seu usuario valido: ')
 print(f'Seja bem vindo, {nome_usuario.upper()}')
 
 # 2 - Crie um programa que receba o nome completo do usuário e imprima o nome com todas as letras minúsculas.
 
+print('Exercicio 2 - Exibindo input em letras minusculas')
 nome_completo = input('Digite seu nome completo: ')
 print(f'Muito prazer, {nome_completo.lower()}')
 
-
 # 3 - Desenvolva um programa que peça ao usuário para inserir uma frase e, em seguida, imprima esta frase sem espaços em branco no início e no final.
 
-
+print('Exercicio 3 - Retirada de espaços em branco')
+frase = input('Insira uma frase: ')
+print(frase.strip)
 
 # 4 - Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.
 
-
+print('Exercicio 4 - separando os dados do input de data, por dia, mes e ano')
+data = input('insira uma data no formado dd/mm/yyyy: ')
+data.split("/")
+print(data)
 
 # 5 - Escreva um programa que concatene duas strings fornecidas pelo usuário.
 
+print('Exercicio 5 - Concatenação de strings')
 frase1 = input('Digite o nome de uma fruta: ')
 frase2 = input('Digite o nome de uma cor: ')
 chave = frase1 + frase2
@@ -137,7 +143,15 @@ print(40*'-')
 
 
 # 1 - Escreva um programa que avalie duas expressões booleanas inseridas pelo usuário e retorne o resultado da operação AND entre elas.
+
+
 # 2 - Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
+
+
 # 3 - Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
+
+
 # 4 - Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
+
+
 # 5 - Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.

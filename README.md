@@ -1,4 +1,6 @@
-# bootcamp_engenharia_de_dados_2024
+# Bootcamp Engenharia de dados 2024
+
+![Imagem](./aula_02/img/teste_2.jpg)
 
 **Data de inicio:** *19/02/2024*
 
