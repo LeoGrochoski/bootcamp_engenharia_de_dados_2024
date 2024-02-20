@@ -8,24 +8,24 @@ print(40*'-')
 
 # 1 - Escreva um programa que soma dois números inteiros inseridos pelo usuário.
 
-print('exercicio 1 - Soma de valores')
+print('Exercicio 1 - Soma de valores')
 num1 = int(input('Digite o primeiro número inteiro: '))
 num2 = int(input('Digite o segundo número inteiro: '))
 
-resultado = num1 / num2
-print(f'O resultado da soma é:, {resultado:.2f}')
+resultado = num1 + num2
+print(f'O resultado da soma é:, {resultado}')
 
 # 2 - Crie um programa que receba um número do usuário e calcule o resto da divisão desse número por 5.
 
-print('exercicio 2 - Calculo de resto de divisão')
+print('Exercicio 2 - Calculo de resto de divisão')
 num_user = int(input('Digite um número: '))
 
 resultado = num_user % 5
-print(f'O resultado do resto da divisão por 5 do número digitado pelo usuario é: ', resultado)
+print(f'O valor {num_user} dividido por 5 é: ', resultado)
 
 # 3 - Desenvolva um programa que multiplique dois números fornecidos pelo usuário e mostre o resultado.
 
-print('exercicio 3 - Multiplicação de valores')
+print('Exercicio 3 - Multiplicação de valores')
 num1 = int(input('Digite o primeiro número inteiro: '))
 num2 = int(input('Digite o segundo número inteiro: '))
 
@@ -34,7 +34,7 @@ print(f'O resultado do número {num1} multiplicado por {num2} é: ', resultado)
 
 # 4 - Faça um programa que peça dois números inteiros e imprima a divisão inteira do primeiro pelo segundo.
 
-print('exercicio 4 - resultado da divisao inteira')
+print('Exercicio 4 - resultado da divisao inteira')
 num1 = int(input('Digite o primeiro número inteiro: '))
 num2 = int(input('Digite o segundo número inteiro: '))
 
@@ -43,10 +43,10 @@ print(f'O resultado da divisao inteira do número {num1} pelo {num2} é: ', resu
 
 # 5 - Escreva um programa que calcule o quadrado de um número fornecido pelo usuário.
 
-print('exercicio 5 - Valor ao quadrado')
+print('Exercicio 5 - Valor ao quadrado')
 num1 = int(input('Digite um número inteiro: '))
 
-resultado = num1 ** num1
+resultado = num1 * num1
 print(f'O quadrado do numero {num1} é: ', resultado)
 
 # Números de Ponto Flutuante (float)
@@ -57,9 +57,9 @@ print(40*'-')
 
 # 1 - Escreva um programa que receba dois números flutuantes e realize sua adição.
 
-print('exercicio 1 - Adição de números decimais')
-num1 = int(input('Digite o primeiro número com decimal: '))
-num2 = int(input('Digite o segundo número com decimal: '))
+print('Exercicio 1 - Adição de números decimais')
+num1 = float(input('Digite o primeiro número com decimal: '))
+num2 = float(input('Digite o segundo número com decimal: '))
 
 resultado = num1 + num2
 print(f'O resultado da soma dos números: {num1} e {num2} é: ', resultado)
@@ -67,27 +67,34 @@ print(f'O resultado da soma dos números: {num1} e {num2} é: ', resultado)
 # 2 - Crie um programa que calcule a média de dois números flutuantes fornecidos pelo usuário.
 
 print('exercicio 2 - Média de números decimais')
-num1 = int(input('Digite o primeiro número com decimal: '))
-num2 = int(input('Digite o segundo número com decimal: '))
+num1 = float(input('Digite o primeiro número com decimal: '))
+num2 = float(input('Digite o segundo número com decimal: '))
 
 media = (num1 + num2) / 2
 print(f'A media dos números: {num1} e {num2} é: ', media)
 
 # 3 - Desenvolva um programa que calcule a potência de um número (base e expoente fornecidos pelo usuário).
 
-print('exercicio 3 - Potenciação')
-num1 = int(input('Digite o valor da base: '))
-num2 = int(input('Digite o valor do expoente: '))
+print('Exercicio 3 - Potenciação')
+base = float(input('Digite o valor da base: '))
+exp = float(input('Digite o valor do expoente: '))
 
-media = (num1 + num2) / 2
-print(f'A media dos números: {num1} e {num2} é: ', media)
+result = base ** exp
+print(f'O resultado da Eponenciação dos numeros decimais {base} e {exp} é: ', result)
 
 # 4 - Faça um programa que converta a temperatura de Celsius para Fahrenheit.
 
+print('Exercicio 4 - Conversão de temperatura de Celcius para Fahrenheit')
+celcius = float(input('Digite o valor da temperatura em celcius: '))
+fahrenheit = celcius * 1,8 + 32
+print(f'A temperatura de {celcius}° Celcius, é de {fahrenheit}° Fahrenheit')
 
 # 5 - Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
 
-
+print('Exercicio 5 - Calculo de área de círculo')
+raio = float(input('Digite o raio do circulo '))
+area = 3.14 * (raio * raio)
+print(f'A area o circulo é: {area}')
 
 #Strings (str)
 
@@ -105,7 +112,7 @@ print(40*'-')
 # Booleanos (bool)
 
 print(40*'-')
-print('      Exericicios do Tipo Str          ')
+print('      Exericicios do Tipo Bool          ')
 print(40*'-')
 
 
