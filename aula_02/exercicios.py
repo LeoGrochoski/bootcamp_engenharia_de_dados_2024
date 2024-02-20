@@ -1,6 +1,6 @@
 # Exercícios Aula 2
 
-# Inteiros (int)
+# A) Exercicios de Inteiros
 
 print(40*'-')
 print('      Exericicios do Tipo Inteiro          ')
@@ -49,7 +49,7 @@ num1 = int(input('Digite um número inteiro: '))
 resultado = num1 * num1
 print(f'{num1} ao quadrado é: ', resultado)
 
-# Números de Ponto Flutuante (float)
+# Exericios de Float
 
 print(40*'-')
 print('      Exericicios do Tipo Float          ')
@@ -62,7 +62,7 @@ num1 = float(input('Digite o primeiro número com decimal: '))
 num2 = float(input('Digite o segundo número com decimal: '))
 
 resultado = num1 + num2
-print(f'O resultado da soma dos números: {num1} e {num2} é: ', resultado)
+print(f'O resultado da soma dos números: {num1} e {num2} é: {resultado:.2f}')
 
 # 2 - Crie um programa que calcule a média de dois números flutuantes fornecidos pelo usuário.
 
@@ -71,7 +71,7 @@ num1 = float(input('Digite o primeiro número com decimal: '))
 num2 = float(input('Digite o segundo número com decimal: '))
 
 media = (num1 + num2) / 2
-print(f'A media dos números: {num1} e {num2} é: ', media)
+print(f'A media dos números: {num1} e {num2} é: {media:.2f}')
 
 # 3 - Desenvolva um programa que calcule a potência de um número (base e expoente fornecidos pelo usuário).
 
@@ -96,7 +96,7 @@ raio = float(input('Digite o raio do circulo '))
 area = 3.142 * (raio * raio)
 print(f'A area o circulo é: {area:.2f}')
 
-#Strings (str)
+# Exercicios de Strings (str)
 
 print(40*'-')
 print('      Exericicios do Tipo Str          ')
@@ -138,7 +138,7 @@ frase2 = input('Digite o nome de uma cor: ')
 chave = frase1 + frase2
 print(f"A chave de segurança é: {chave}")
 
-# Booleanos (bool)
+# Exercicios de Booleanos (bool)
 
 print(40*'-')
 print('      Exericicios do Tipo Bool          ')
@@ -149,31 +149,51 @@ print(40*'-')
 
 print('Exercicio 1 - Verificador de operações AND')
 
-exp_bool_1 = int(input('Digite a primeira expressão bool: '))
-exp_bool_2 = int(input('Digite a segunda expressão bool: '))
+exp_bool_1 = bool(input('Digite a primeira expressão bool: '))
+exp_bool_2 = bool(input('Digite a segunda expressão bool: '))
 
-resultado = exp_bool_1 and exp_bool_2
-print(f'O resultado das expressões com AND é: {resultado}')
+resultado_and = exp_bool_1 and exp_bool_2
+print(f'O resultado das expressões com AND é: {resultado_and}')
 
 # 2 - Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
 
 print('Exercicio 2 - Verificador de operações OR')
-exp_bool_1 = int(input('Digite a primeira expressão bool: '))
-exp_bool_2 = int(input('Digite a segunda expressão bool: '))
 
-resultado = exp_bool_1 or exp_bool_2
-print(f'O resultado das expressões com OR é: {resultado}')
+resultado_or = exp_bool_1 or exp_bool_2
+print(f'O resultado das expressões com OR é: {resultado_or}')
 
 # 3 - Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
 
-print('Exercicio 3 - ')
+print('Exercicio 3 - Invertando a expressão booleana')
 
+resultado_not = not exp_bool_1
+print(f'A inversão da expressão boolean {exp_bool_1} é {resultado_not}')
 
 # 4 - Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
 
-print('Exercicio 4 - ')
+print('Exercicio 4 - Comparação de valores')
 
+num1 = bool(input('Digite um valor para comperação :'))
+num2 = bool(input('Digite o segundo valor para comperação :'))
+
+validador = num1 == num2
+
+if validador == True:
+    print('Os números são iguais')
+else:
+    print('Os números são diferentes')
 
 # 5 - Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
 
-print('Exercicio 5 - ')
+print('Exercicio 5 - Verificação de divergencia de valores')
+
+num1 = bool(input('Digite um valor para comparação :'))
+num2 = bool(input('Digite o segundo valor para comparação :'))
+
+validador = num1 == num2
+
+if validador == False:
+
+    print('Os números são divergentes')
+else:
+    print('Os números são guais')
