@@ -118,14 +118,17 @@ print(f'Muito prazer, {nome_completo.lower()}')
 
 print('Exercicio 3 - Retirada de espaços em branco')
 frase = input('Insira uma frase: ')
-print(frase.strip)
+frase_sem_espaco = frase.strip()
+print(frase_sem_espaco)
 
 # 4 - Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.
 
-print('Exercicio 4 - separando os dados do input de data, por dia, mes e ano')
+print('Exercicio 4 - Separando os dados do input de data, por dia, mes e ano')
 data = input('insira uma data no formado dd/mm/yyyy: ')
-data.split("/")
-print(data)
+dia, mes, ano = data.split("/")
+print(f'Dia: {dia}')
+print(f'Mês: {mes}')
+print(f'Ano: {ano}')
 
 # 5 - Escreva um programa que concatene duas strings fornecidas pelo usuário.
 
@@ -144,14 +147,33 @@ print(40*'-')
 
 # 1 - Escreva um programa que avalie duas expressões booleanas inseridas pelo usuário e retorne o resultado da operação AND entre elas.
 
+print('Exercicio 1 - Verificador de operações AND')
+
+exp_bool_1 = int(input('Digite a primeira expressão bool: '))
+exp_bool_2 = int(input('Digite a segunda expressão bool: '))
+
+resultado = exp_bool_1 and exp_bool_2
+print(f'O resultado das expressões com AND é: {resultado}')
 
 # 2 - Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
 
+print('Exercicio 2 - Verificador de operações OR')
+exp_bool_1 = int(input('Digite a primeira expressão bool: '))
+exp_bool_2 = int(input('Digite a segunda expressão bool: '))
+
+resultado = exp_bool_1 or exp_bool_2
+print(f'O resultado das expressões com OR é: {resultado}')
 
 # 3 - Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
+
+print('Exercicio 3 - ')
 
 
 # 4 - Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
 
+print('Exercicio 4 - ')
+
 
 # 5 - Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
+
+print('Exercicio 5 - ')
