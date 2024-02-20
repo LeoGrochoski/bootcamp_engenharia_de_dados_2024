@@ -21,7 +21,7 @@ print('Exercicio 2 - Calculo de resto de divisão')
 num_user = int(input('Digite um número: '))
 
 resultado = num_user % 5
-print(f'O valor {num_user} dividido por 5 é: ', resultado)
+print(f'O resto da divisão do numero {num_user} dividido por 5 é: ', resultado)
 
 # 3 - Desenvolva um programa que multiplique dois números fornecidos pelo usuário e mostre o resultado.
 
@@ -30,7 +30,7 @@ num1 = int(input('Digite o primeiro número inteiro: '))
 num2 = int(input('Digite o segundo número inteiro: '))
 
 resultado = num1 * num2
-print(f'O resultado do número {num1} multiplicado por {num2} é: ', resultado)
+print(f'O valor de {num1} multiplicado por {num2} é: ', resultado)
 
 # 4 - Faça um programa que peça dois números inteiros e imprima a divisão inteira do primeiro pelo segundo.
 
@@ -47,7 +47,7 @@ print('Exercicio 5 - Valor ao quadrado')
 num1 = int(input('Digite um número inteiro: '))
 
 resultado = num1 * num1
-print(f'O quadrado do numero {num1} é: ', resultado)
+print(f'{num1} ao quadrado é: ', resultado)
 
 # Números de Ponto Flutuante (float)
 
@@ -80,20 +80,20 @@ base = float(input('Digite o valor da base: '))
 exp = float(input('Digite o valor do expoente: '))
 
 result = base ** exp
-print(f'O resultado da Eponenciação dos numeros decimais {base} e {exp} é: ', result)
+print(f'O resultado da Eponenciação de {base} por {exp} é: ', result)
 
 # 4 - Faça um programa que converta a temperatura de Celsius para Fahrenheit.
 
 print('Exercicio 4 - Conversão de temperatura de Celcius para Fahrenheit')
 celcius = float(input('Digite o valor da temperatura em celcius: '))
-fahrenheit = celcius * 1,8 + 32
-print(f'A temperatura de {celcius}° Celcius, é de {fahrenheit}° Fahrenheit')
+fahrenheit = celcius * 1.8 + 32
+print(f'A temperatura de {celcius}° Celcius, é de {fahrenheit:.2f}° Fahrenheit')
 
 # 5 - Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
 
 print('Exercicio 5 - Calculo de área de círculo')
 raio = float(input('Digite o raio do circulo '))
-area = 3.14 * (raio * raio)
+area = 3.142 * (raio * raio)
 print(f'A area o circulo é: {area}')
 
 #Strings (str)
@@ -104,10 +104,30 @@ print(40*'-')
 
 
 # 1 - Escreva um programa que receba uma string do usuário e a converta para maiúsculas.
+
+nome_usuario = input('Digite seu usuario valido: ')
+print(f'Seja bem vindo, {nome_usuario.upper()}')
+
 # 2 - Crie um programa que receba o nome completo do usuário e imprima o nome com todas as letras minúsculas.
+
+nome_completo = input('Digite seu nome completo: ')
+print(f'Muito prazer, {nome_completo.lower()}')
+
+
 # 3 - Desenvolva um programa que peça ao usuário para inserir uma frase e, em seguida, imprima esta frase sem espaços em branco no início e no final.
+
+
+
 # 4 - Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.
+
+
+
 # 5 - Escreva um programa que concatene duas strings fornecidas pelo usuário.
+
+frase1 = input('Digite o nome de uma fruta: ')
+frase2 = input('Digite o nome de uma cor: ')
+chave = frase1 + frase2
+print(f"A chave de segurança é: {chave}")
 
 # Booleanos (bool)
 
