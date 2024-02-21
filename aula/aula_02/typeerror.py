@@ -1,3 +1,4 @@
+
 # Exercícios TypeError, Type Check e Type Conversion em Python
 
 # Aqui estão cinco exercícios que envolvem `TypeError`, verificação de tipo (`type check`), 
@@ -10,6 +11,8 @@
 # O programa deve solicitar ao usuário a temperatura em Celsius e, utilizando `try-except`, 
 # garantir que a entrada seja numérica, tratando qualquer `ValueError`. 
 # Imprima o resultado em Fahrenheit ou uma mensagem de erro se a entrada não for válida.
+
+print('Exercício 21: Conversor de Temperatura')
 
 try:
     celcius = float(input('Digite o valor da temperatura em celcius: '))
@@ -24,6 +27,8 @@ except ValueError:
 # (lê-se igualmente de trás para frente, desconsiderando espaços e pontuações). 
 # Utilize `try-except` para garantir que a entrada seja uma string. 
 # Dica: Utilize a função `isinstance()` para verificar o tipo da entrada.
+
+print('Exercício 22: Verificador de Palíndromo')
 
 try:
     entrada = input('Digite uma palavra ou uma frase para verificar se é um palindromo: ')
@@ -44,24 +49,22 @@ except:
 # Utilize `if-elif-else` para realizar a operação matemática baseada no operador fornecido. 
 # Imprima o resultado ou uma mensagem de erro apropriada.
 
+print('Exercício 23: Calculadora Simples')
+
 try:
     print('--------------------------------------------------------------------')
     print('                          CALCULADORA                               ')
     print('--------------------------------------------------------------------')
-    print('[+] - 1')
-    print('[-] - 2')
-    print('[/] - 3')
-    print('[*] - 4')
     num1 = float(input('Insira o primeiro valor: '))
     num2 = float(input('Insira o segundo valor: '))
-    operador = int(input('Digite o numero correspondente a operação que deseja: '))
-    if operador == 1:
+    operador = input('Digite o sinal da operação que deseja: ')
+    if operador == '+':
         resultado = num1 + num2
-    elif operador == 2:
+    elif operador == '-':
         resultado = num1 - num2
-    elif operador == 3:
+    elif operador == '/' and num2 != 0:
         resultado = num1 / num2
-    elif operador == 4:
+    elif operador == '*':
         resultado = num1 * num2
     else:
         print('Operador invalido')
@@ -75,18 +78,20 @@ except ValueError:
 # Utilize `try-except` para assegurar que a entrada seja numérica e utilize `if-elif-else` para classificar o número como "positivo", 
 # "negativo" ou "zero". Adicionalmente, identifique se o número é "par" ou "ímpar".
 
+print('Exercício 24: Classificador de Números')
+
 try:
     valor = int(input('Digite um numero: '))
     if valor > 0:
-        print('O numero digitado é positivo')
+        print(f'O número {valor} é positivo')
     elif valor < 0:
-        print('O numero digitado é negativo')
+        print(f'O número {valor} é negativo')
     else:
-        print('O numero digitado é zero')
+        print(f'O número {valor} é zero')
     if valor % 2 == 0:
-        print(f'O numero {valor} é par')
+        print(f'O número {valor} é par')
     else: 
-        print(f'O numero {valor} é impar')
+        print(f'O número {valor} é impar')
 except ValueError:
     print('Certifique-se de fornecer um valor valido')
 
@@ -97,4 +102,14 @@ except ValueError:
 # Utilize try-except para tratar a conversão de cada número e validar que cada elemento da lista convertida é um inteiro.
 # Se a conversão falhar ou um elemento não for um inteiro, imprima uma mensagem de erro.
 # Se a conversão for bem-sucedida para todos os elementos, imprima a lista de inteiros.
-    
+
+print('Exericio 25 - Conversão de Tipo com Validação')
+
+lista_numeros = []
+try: 
+    for i in range(4):
+        numero = int(input('Digite um numero para adicionar a lista: '))
+        lista_numeros.append(numero)
+        print(lista_numeros)
+except:
+    print('Digite numeros validos')
