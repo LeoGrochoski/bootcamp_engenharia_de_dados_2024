@@ -105,11 +105,20 @@ except ValueError:
 
 print('Exericio 25 - Conversão de Tipo com Validação')
 
-lista_numeros = []
-try: 
-    for i in range(4):
-        numero = int(input('Digite um numero para adicionar a lista: '))
-        lista_numeros.append(numero)
-        print(lista_numeros)
+lista_numerica = input('Digite uma lista de numeros separados por virgula: ')
+numeros_str = lista_numerica.split(",")
+lista_int = []
+
+try:
+    for num in numeros_str:
+        lista_int.append(int(num.strip()))
+    print('Lista tratada', lista_int)
 except:
-    print('Digite numeros validos')
+    print('Digite numeros inteiros validos')
+
+todos_inteiros = all(isinstance(num, int) for num in lista_int)
+
+if todos_inteiros:
+    print('Todos os números na lista são inteiros.')
+else:
+    print('Pelo menos um dos números na lista não é um inteiro.')
