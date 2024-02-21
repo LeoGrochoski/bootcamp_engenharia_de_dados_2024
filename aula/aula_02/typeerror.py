@@ -15,7 +15,7 @@ try:
     celcius = float(input('Digite o valor da temperatura em celcius: '))
     fahrenheit = celcius * 1.8 + 32
     print(f'A temperatura de {celcius}° Celcius, é de {fahrenheit:.2f}° Fahrenheit')
-except:
+except ValueError:
     print('Digite um valor valido para temperatura em celcius')
 
 # Exercício 22: Verificador de Palíndromo
@@ -44,7 +44,30 @@ except:
 # Utilize `if-elif-else` para realizar a operação matemática baseada no operador fornecido. 
 # Imprima o resultado ou uma mensagem de erro apropriada.
 
-
+try:
+    print('--------------------------------------------------------------------')
+    print('                          CALCULADORA                               ')
+    print('--------------------------------------------------------------------')
+    print('[+] - 1')
+    print('[-] - 2')
+    print('[/] - 3')
+    print('[*] - 4')
+    num1 = float(input('Insira o primeiro valor: '))
+    num2 = float(input('Insira o segundo valor: '))
+    operador = int(input('Digite o numero correspondente a operação que deseja: '))
+    if operador == 1:
+        resultado = num1 + num2
+    elif operador == 2:
+        resultado = num1 - num2
+    elif operador == 3:
+        resultado = num1 / num2
+    elif operador == 4:
+        resultado = num1 * num2
+    else:
+        print('Operador invalido')
+    print(resultado)
+except ValueError:
+    print('Erro: Entrada inválida. Certifique-se de inserir números.')
 
 # Exercício 24: Classificador de Números
 
@@ -52,7 +75,20 @@ except:
 # Utilize `try-except` para assegurar que a entrada seja numérica e utilize `if-elif-else` para classificar o número como "positivo", 
 # "negativo" ou "zero". Adicionalmente, identifique se o número é "par" ou "ímpar".
 
-
+try:
+    valor = int(input('Digite um numero: '))
+    if valor > 0:
+        print('O numero digitado é positivo')
+    elif valor < 0:
+        print('O numero digitado é negativo')
+    else:
+        print('O numero digitado é zero')
+    if valor % 2 == 0:
+        print(f'O numero {valor} é par')
+    else: 
+        print(f'O numero {valor} é impar')
+except ValueError:
+    print('Certifique-se de fornecer um valor valido')
 
 # Exercício 25: Conversão de Tipo com Validação
  
@@ -61,3 +97,4 @@ except:
 # Utilize try-except para tratar a conversão de cada número e validar que cada elemento da lista convertida é um inteiro.
 # Se a conversão falhar ou um elemento não for um inteiro, imprima uma mensagem de erro.
 # Se a conversão for bem-sucedida para todos os elementos, imprima a lista de inteiros.
+    
