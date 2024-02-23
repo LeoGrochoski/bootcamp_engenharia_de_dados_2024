@@ -46,10 +46,6 @@ if log['level'] == 'ERROR':
 else:
     print('Passou')
 
-# Exercício 4: Validação de Dados de Entrada
-# Antes de processar os dados de usuários em um sistema de recomendação, 
-# você precisa garantir que cada usuário tenha idade entre 18 e 65 anos e tenha fornecido um email válido. 
-# Escreva um programa que valide essas condições e imprima "Dados de usuário válidos" ou o erro específico encontrado.
 
 # Exercício 4: Validação de Dados de Entrada
 # Antes de processar os dados de usuários em um sistema de recomendação, 
@@ -88,3 +84,10 @@ print('Dados validos - Cadastro realizado com sucesso!')
 # Você está trabalhando em um sistema de detecção de fraude e precisa identificar transações suspeitas. 
 # Uma transação é considerada suspeita se o valor for superior a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). 
 # Dada uma transação como transacao = {'valor': 12000, 'hora': 20}, verifique se ela é suspeita.
+
+transacao = {'valor': 12000, 'hora': 20}
+valor_limite = 10000
+
+if transacao['valor'] > valor_limite or transacao['hora'] < 9 or transacao['hora'] > 18:
+    print(f'TRANSAÇÃO SUSPEITA: A transação no valor de: {transacao['valor']} realizada as: {transacao["hora"]} hrs é suspeita pois foge aos padrões estabelecidos, caso não tenha realizado a transação entre em contato com o banco no numero 3333-4444')
+
