@@ -12,5 +12,5 @@ bonus_fixo = 1000
 bonus = bonus_fixo + salario * bonus_perc
 
 print(f'Ola {nome}, seja muito bem vindo ao Portal Finanças')
-print(f'Seu salario é de: {salario}')
-print(f'Seu bonus foi de: R${bonus}')
+print(f'Seu salario é de: R$ {salario}')
+print(f'Seu bonus foi de: R$ {bonus}')
