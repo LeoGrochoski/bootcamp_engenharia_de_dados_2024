@@ -1,5 +1,4 @@
-# Exercicios IF
-
+# A) Exercicios IF
 
 # Exercício 1: Verificação de Qualidade de Dados
 # Você está analisando um conjunto de dados de vendas e precisa garantir que todos os registros tenham valores positivos para quantidade e preço. 
@@ -90,4 +89,27 @@ valor_limite = 10000
 
 if transacao['valor'] > valor_limite or transacao['hora'] < 9 or transacao['hora'] > 18:
     print(f'TRANSAÇÃO SUSPEITA: A transação no valor de: {transacao['valor']} realizada as: {transacao["hora"]} hrs é suspeita pois foge aos padrões estabelecidos, caso não tenha realizado a transação entre em contato com o banco no numero 3333-4444')
+else:
+    print('Transação padrão')
 
+# B) Exercicios FOR
+
+# Exercicio 6. Contagem de Palavras em Textos
+# Dado um texto, contar quantas vezes cada palavra única aparece nele.
+    
+texto = '"Na vastidão do universo, estrelas cintilam como jóias preciosas, refletindo a luz da criação. Criação que molda destinos e desperta paixões, paixões que alimentam o fogo da vida, vida que pulsa em cada batida do coração."'
+    
+palavras = texto.split(" ")
+
+# Exercicio 7. Normalização de Dados
+# Normalizar uma lista de números para que fiquem na escala de 0 a 1.
+    
+# Exercicio 8. Filtragem de Dados Faltantes
+# Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando.
+    
+# Exercicio 9. Extração de Subconjuntos de Dados
+# Dada uma lista de números, extrair apenas aqueles que são pares.
+    
+# Exercicio 10. Agregação de Dados por Categoria
+# Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
+    
