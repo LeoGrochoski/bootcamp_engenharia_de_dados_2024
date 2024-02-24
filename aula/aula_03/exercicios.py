@@ -205,6 +205,50 @@ while True:
         print(valor)
         break
 
-# Exercicio 13. Consumo de API Simulado
+# Exercicio 13 - Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
 
+pagina_inicial = 0
+paginas = 9
+conteudo = ['Leão', 'Macaco', 'Tubarão', 'Jacaré', 'Tucano', 'Elefante', 'Cachorro', 'Galinha', 'Pinguim', 'Urso']
+cont = 0
+
+while pagina_inicial < paginas:
+    print(f'pagina: {cont + 1}, ', conteudo[cont])
+    cont += 1
+    if conteudo[cont] == conteudo[-1]:
+        print(f'pagina: {cont + 1}, ',conteudo[-1])
+        break
+
+# Exercicio 14 - Tentativas de Conexão
+# Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
+    
+import random
+
+tentativa = 1
+requisicao = 3
+Ligado = 1
+
+while tentativa <= requisicao:
+    internet = random.randint(1,2)
+    print(f'tentativa {tentativa} de reconectar...')
+    if internet == 1:
+        print('Tentativa de Reconexão bem-sucedida')
+        break
+    tentativa += 1
+else:
+    print('Falha na tentativa de reconexão, tente mais tarde!')
+
+# Exercicio 15. Processamento de Dados com Condição de Parada
+# Processar itens de uma lista até encontrar um valor específico que indica a parada.
+    
+item = ['teste', 'treino', 'parada','pipeline', 'documentação']
+cont = 0
+
+while True:
+    if item[cont] == 'parada':
+        print('Indicador de parada encontrado')
+        break
+    else:
+        print(f'Processando item: ', item[cont])
+    cont += 1
