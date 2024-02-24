@@ -98,12 +98,31 @@ else:
 # Dado um texto, contar quantas vezes cada palavra única aparece nele.
     
 texto = '"Na vastidão do universo, estrelas cintilam como jóias preciosas, refletindo a luz da criação. Criação que molda destinos e desperta paixões, paixões que alimentam o fogo da vida, vida que pulsa em cada batida do coração."'
-    
-palavras = texto.split(" ")
+
+novo_texto = texto.replace(',', '')    
+palavras = novo_texto.split(" ")
+contagem_palavras = {}
+
+print(palavras)
+
+for palavra in palavras:
+    if palavra in contagem_palavras:
+        contagem_palavras[palavra] += 1
+    else:
+        contagem_palavras[palavra] = 1
+
+print(contagem_palavras)
 
 # Exercicio 7. Normalização de Dados
 # Normalizar uma lista de números para que fiquem na escala de 0 a 1.
-    
+
+numeros = [10, 20, 30, 40, 50]
+minimo = min(numeros)
+maximo = max(numeros)
+normalizados = [(x - minimo) / (maximo - minimo) for x in numeros]
+
+print(normalizados)
+
 # Exercicio 8. Filtragem de Dados Faltantes
 # Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando.
     
