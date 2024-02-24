@@ -124,11 +124,60 @@ normalizados = [(x - minimo) / (maximo - minimo) for x in numeros]
 print(normalizados)
 
 # Exercicio 8. Filtragem de Dados Faltantes
-# Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando.
-    
+# Dada uma lista de dicionários representando dados de usuários, 
+# filtrar aqueles que têm um campo específico faltando.
+
+usuarios = [
+    {"nome": "Alice", "email": "alice@example.com"},
+    {"nome": "Bob", "email": ""},
+    {"nome": "Carol", "email": "carol@example.com"}
+]
+
+usuarios_sem_conteudo = []
+
+for usuario in usuarios:
+    if any(valor == "" for valor in usuario.values()):
+        usuarios_sem_conteudo.append(usuario)
+
+print(usuarios_sem_conteudo)
+
+
 # Exercicio 9. Extração de Subconjuntos de Dados
 # Dada uma lista de números, extrair apenas aqueles que são pares.
+
+import random 
+
+valores = []
+valores_pares = []
+
+for i in range(5):
+    valores.append(random.randrange(0, 10))
+print(valores)
+
+for valor in valores:
+    if valor % 2 == 0:
+        valores_pares.append(valor)
+
+print(valores_pares)
+
     
 # Exercicio 10. Agregação de Dados por Categoria
 # Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
     
+
+vendas = [
+    {"categoria": "eletrônicos", "valor": 1200},
+    {"categoria": "livros", "valor": 200},
+    {"categoria": "eletrônicos", "valor": 800}
+]
+
+total_por_categoria = {}
+for venda in vendas:
+    categoria = venda["categoria"]
+    valor = venda["valor"]
+    if categoria in total_por_categoria:
+        total_por_categoria[categoria] += valor
+    else:
+        total_por_categoria[categoria] = valor
+
+print(total_por_categoria)
