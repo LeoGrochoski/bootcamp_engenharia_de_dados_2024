@@ -37,17 +37,32 @@ print(livro["ano publicacao"])
 
 # Exercicio 4 - Escreva um programa que conta o número de ocorrências de cada caractere em uma string usando um dicionário.
 
-from collections import Counter
+valor = "tijolo"
+letras = [l for l in valor]
+print(letras)
+armazem = {}
 
-palavra = "tijolo".split()
+for letra in letras:
+    if letra in armazem:
+        armazem[letra] += 1
+    else:
+        armazem[letra] = 1
 
-armazem = []
-
-c=Counter()
-for p in palavra:
-    c.update(set(p))
-print(c.most_common())
-print([a[0] for a in c.most_common()])
+print(armazem)
 
 # Exercicio 5 - Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}, 
 # calcule o preço total da lista de compras.
+
+lista_frutas = ["maçã", "banana", "cereja"]
+frutas = {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}
+
+somador = 0
+valor_compras = []
+
+for i in range(len(lista_frutas)):
+    fruta = (lista_frutas[somador])
+    valor = (frutas[fruta])
+    print(f'O valor da fruta: {fruta} é de: {valor}')
+    valor_compras.append(valor)
+    somador += 1
+print(f'O valor total das compas é de: R$ {sum(valor_compras)}')
