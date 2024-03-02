@@ -54,8 +54,35 @@ print(sorted(nome_ordenados))
 # Exercicio 9 - Agregação de Dados
 # Dado um conjunto de números, calcular a média.
 
+gastos_mes_janeiro = [100.0, 200.0, 75.0, 230.50, 24.33, 48.20]
+
+media_gastos_janeiro = sum(gastos_mes_janeiro) / len(gastos_mes_janeiro)
+
+print(media_gastos_janeiro)
+
+
 # Exercico 10 - Divisão de Dados em Grupos
 # Dada uma lista de valores, dividir em duas listas: uma para valores pares e outra para ímpares.
+import random
+
+lista_valores = []
+
+for i in range(5):
+    valores = random.randint(1, 11)
+    lista_valores.append(valores)
+
+valores_pares = []
+valores_impares = []
+
+for valor in lista_valores:
+    if valor % 2 == 0:
+        valores_pares.append(valor)
+    else:
+        valores_impares.append(valor)
+
+print(valores_pares)
+print(valores_impares)
+        
 
 # Exercicios de Dicionario
 
