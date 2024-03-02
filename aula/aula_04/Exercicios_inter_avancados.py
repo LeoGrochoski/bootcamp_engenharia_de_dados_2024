@@ -3,11 +3,53 @@
 # Exercicios 6 - Eliminação de Duplicatas
 # Dada uma lista de emails, remover todos os duplicados.
 
+emails = ["joao@example.com", "paulo@example.com", "paulo@example.com", "rafael@example.com"]
+
+print ("A lista é: " + str(emails)) # Convertendo para str para poder concatenar, listas não podem serem concatenadas
+
+# Removendo duplicados
+lista_sem_duplicados = list(set(emails)) 
+
+# printing list after removal 
+print ("A lista depois de remover os duplicados: " + str(lista_sem_duplicados)) 
+
 # Exercicio 7 - Filtragem de Dados
 # Dada uma lista de idades, filtrar apenas aquelas que são maiores ou iguais a 18.
 
+idades = [8, 18, 28, 15, 29, 49, 37, 50, 11]
+
+maiores_18 = []
+menores_18 = []
+
+for idade in idades:
+    if idade >= 18:
+        maiores_18.append(idade)
+    else:
+        menores_18.append(idade)
+
+print(f"Essas idades são maiores ou iguais a 18 anos: {maiores_18}")
+print(f"Essas idades são menores que 18 anos: {menores_18}")
+
+
 # Exercicio 8 - Ordenação Personalizada
 # Dada uma lista de dicionários representando pessoas, ordená-las pelo nome.
+
+lista_dicionarios = [{"nome":"paulo", 
+                      "idade":28, 
+                      "email":"paulo@gmail.com"}, 
+                      {"nome":"nicolas",
+                       "idade":10,
+                       "email":"nico@oulook.com"}, 
+                       {"nome":"jose",
+                        "idade":40,
+                        "email":"zerodri1984@yahoo.com"}]
+
+nome_ordenados = []
+
+for dicionario in lista_dicionarios:
+    nome_ordenados.append((dicionario["nome"]))
+
+print(sorted(nome_ordenados))
 
 # Exercicio 9 - Agregação de Dados
 # Dado um conjunto de números, calcular a média.
