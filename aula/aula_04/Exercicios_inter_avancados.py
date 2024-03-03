@@ -89,11 +89,52 @@ print(valores_impares)
 # Exercicio 11. Atualização de Dados
 # Dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico. 
 
+produtos = [{"nome":"Martelo de Unha 20mm Tramontina", "valor":29.00},
+            {"nome":"Broca para Concreto 6x100mm", "valor":11.49},
+            {"nome":"Lixa para Madeira e Massa Grão 80 ", "valor":3.20},
+            {"nome":"Tinta Impermeabilizante Emborrachada Branca Fosca 18L", "valor":474.90}]
+
+for produto in produtos:
+    for item in produto:
+        if produto.get(item) == 29.00:
+            produto.update({item: 31.00})
+
+print(produtos[0])
+
 # Exercicio 12. Fusão de Dicionários
 # Dados dois dicionários, fundi-los em um único dicionário.
 
+
+
+clientes_1 = {'John': 15, 'Rick': 10, 'Misa' : 12 }
+clientes_2 = {'Bonnie': 18,'Rick': 20,'Matt' : 16 }
+clientes_1.update(clientes_2)
+print('Atualizando Dicionario:')
+print(clientes_1)
+
 # Exercicio 13. Filtragem de Dados em Dicionário
 # Dado um dicionário de estoque de produtos, filtrar aqueles com quantidade maior que 0.
+
+catalogo = {"calça":50,  
+           "camiseta":200, 
+           "tenis":34,
+           "jaqueta":15, 
+           "sueter":0, 
+           "meia":10,
+           "cachicol":0, 
+           }
+
+print(catalogo)
+
+a = (catalogo.items())
+
+itens_em_estoque = []
+
+for item in a:
+    if item[1] > 0:
+        itens_em_estoque.append((item[0]))
+
+print(f"Os itens disponiveis em estoque são: {itens_em_estoque}")
 
 # Exercicio 14. Extração de Chaves e Valores
 # Dado um dicionário, criar listas separadas para suas chaves e valores.
