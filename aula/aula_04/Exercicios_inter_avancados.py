@@ -1,7 +1,7 @@
-# Exercicios de Lista
+# # Exercicios de Lista
 
-# Exercicios 6 - Eliminação de Duplicatas
-# Dada uma lista de emails, remover todos os duplicados.
+# # Exercicios 6 - Eliminação de Duplicatas
+# # Dada uma lista de emails, remover todos os duplicados.
 
 emails = ["joao@example.com", "paulo@example.com", "paulo@example.com", "rafael@example.com"]
 
@@ -13,8 +13,8 @@ lista_sem_duplicados = list(set(emails))
 # printing list after removal 
 print ("A lista depois de remover os duplicados: " + str(lista_sem_duplicados)) 
 
-# Exercicio 7 - Filtragem de Dados
-# Dada uma lista de idades, filtrar apenas aquelas que são maiores ou iguais a 18.
+# # Exercicio 7 - Filtragem de Dados
+# # Dada uma lista de idades, filtrar apenas aquelas que são maiores ou iguais a 18.
 
 idades = [8, 18, 28, 15, 29, 49, 37, 50, 11]
 
@@ -30,9 +30,8 @@ for idade in idades:
 print(f"Essas idades são maiores ou iguais a 18 anos: {maiores_18}")
 print(f"Essas idades são menores que 18 anos: {menores_18}")
 
-
-# Exercicio 8 - Ordenação Personalizada
-# Dada uma lista de dicionários representando pessoas, ordená-las pelo nome.
+# # Exercicio 8 - Ordenação Personalizada
+# # Dada uma lista de dicionários representando pessoas, ordená-las pelo nome.
 
 lista_dicionarios = [{"nome":"paulo", 
                       "idade":28, 
@@ -51,8 +50,8 @@ for dicionario in lista_dicionarios:
 
 print(sorted(nome_ordenados))
 
-# Exercicio 9 - Agregação de Dados
-# Dado um conjunto de números, calcular a média.
+# # Exercicio 9 - Agregação de Dados
+# # Dado um conjunto de números, calcular a média.
 
 gastos_mes_janeiro = [100.0, 200.0, 75.0, 230.50, 24.33, 48.20]
 
@@ -60,16 +59,16 @@ media_gastos_janeiro = sum(gastos_mes_janeiro) / len(gastos_mes_janeiro)
 
 print(media_gastos_janeiro)
 
+# # Exercico 10 - Divisão de Dados em Grupos
+# # Dada uma lista de valores, dividir em duas listas: uma para valores pares e outra para ímpares.
 
-# Exercico 10 - Divisão de Dados em Grupos
-# Dada uma lista de valores, dividir em duas listas: uma para valores pares e outra para ímpares.
 import random
 
 lista_valores = []
 
 for i in range(5):
     valores = random.randint(1, 11)
-    lista_valores.append(valores)
+    lista_valores.append(valores) 
 
 valores_pares = []
 valores_impares = []
@@ -83,11 +82,10 @@ for valor in lista_valores:
 print(valores_pares)
 print(valores_impares)
         
+# # Exercicios de Dicionario
 
-# Exercicios de Dicionario
-
-# Exercicio 11. Atualização de Dados
-# Dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico. 
+# # Exercicio 11. Atualização de Dados
+# # Dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico. 
 
 produtos = [{"nome":"Martelo de Unha 20mm Tramontina", "valor":29.00},
             {"nome":"Broca para Concreto 6x100mm", "valor":11.49},
@@ -101,10 +99,8 @@ for produto in produtos:
 
 print(produtos[0])
 
-# Exercicio 12. Fusão de Dicionários
-# Dados dois dicionários, fundi-los em um único dicionário.
-
-
+# # Exercicio 12. Fusão de Dicionários
+# # Dados dois dicionários, fundi-los em um único dicionário.
 
 clientes_1 = {'John': 15, 'Rick': 10, 'Misa' : 12 }
 clientes_2 = {'Bonnie': 18,'Rick': 20,'Matt' : 16 }
@@ -112,8 +108,8 @@ clientes_1.update(clientes_2)
 print('Atualizando Dicionario:')
 print(clientes_1)
 
-# Exercicio 13. Filtragem de Dados em Dicionário
-# Dado um dicionário de estoque de produtos, filtrar aqueles com quantidade maior que 0.
+# # Exercicio 13. Filtragem de Dados em Dicionário
+# # Dado um dicionário de estoque de produtos, filtrar aqueles com quantidade maior que 0.
 
 catalogo = {"calça":50,  
            "camiseta":200, 
@@ -139,5 +135,27 @@ print(f"Os itens disponiveis em estoque são: {itens_em_estoque}")
 # Exercicio 14. Extração de Chaves e Valores
 # Dado um dicionário, criar listas separadas para suas chaves e valores.
 
+catalogo = {"calça":50,  
+           "camiseta":200, 
+           "tenis":34,
+           "jaqueta":15, 
+           "sueter":0, 
+           "meia":10,
+           "cachicol":0, 
+           }
+
+itens = []
+quantidades = []
+
+a = (catalogo.items())
+
+for item in a:
+    itens.append((item[0]))
+    quantidades.append((item[1]))
+
+print(itens)
+print(quantidades)
+
 # Exercicio 15. Contagem de Frequência de Itens
 # Dada uma string, contar a frequência de cada caractere usando um dicionário.
+
