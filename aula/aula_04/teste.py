@@ -1,15 +1,13 @@
-valor = int(input("Digite um valor para verificação se é primo: "))
 
-def verificador_primo(numero: int) -> int:
-    for i in range(2,numero):
-        if (numero%i) == 0:
-            return False
-        return True
+# Exercicio 20 - Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas.
 
-    
-numero_primo = verificador_primo(valor)
+alunos: dict = {"aluno_02":"Jose","aluno_01":"Leonardo", "aluno_05":"Felipe", "aluno_03":"Paulo", "aluno_06":"Mateus", "aluno_04":"Kleber"}
+ordem_alunos: list = [] 
 
-if numero_primo == True:
-    print(f"O numero: {valor} é primo")
-else:
-    print(f"O numero: {valor} não é primo")
+def ordenador(dicionario: dict):
+    dicionario_ordenado = dict(sorted(dicionario.items()))   
+    return dicionario_ordenado
+
+print(ordenador(alunos))
+
+# print(ordenador(alunos))
