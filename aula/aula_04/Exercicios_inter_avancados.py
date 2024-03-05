@@ -4,11 +4,11 @@
 # # Dada uma lista de emails, remover todos os duplicados.
 print('Exercicio 6 - Eliminação de Duplicatas')
 
-emails = ["joao@example.com", "paulo@example.com", "paulo@example.com", "rafael@example.com"]
+emails: list = ["joao@example.com", "paulo@example.com", "paulo@example.com", "rafael@example.com"]
 
 print ("A lista é: " + str(emails)) # Convertendo para str para poder concatenar, listas não podem serem concatenadas
 
-lista_sem_duplicados = list(set(emails)) 
+lista_sem_duplicados: list = list(set(emails)) 
 
 print ("A lista depois de remover os duplicados: " + str(lista_sem_duplicados)) 
 
@@ -17,10 +17,10 @@ print ("A lista depois de remover os duplicados: " + str(lista_sem_duplicados))
 
 print('Exercicio 7 - Filtragem de Dados')
 
-idades = [8, 18, 28, 15, 29, 49, 37, 50, 11]
+idades: list = [8, 18, 28, 15, 29, 49, 37, 50, 11]
 
-maiores_18 = []
-menores_18 = []
+maiores_18: list = []
+menores_18: list = []
 
 for idade in idades:
     if idade >= 18:
@@ -36,7 +36,7 @@ print(f"Essas idades são menores que 18 anos: {menores_18}")
 
 print('Exercicio 8 - Ordenação Personalizada')
 
-lista_dicionarios = [{"nome":"paulo", 
+lista_dicionarios: list = [{"nome":"paulo", 
                       "idade":28, 
                       "email":"paulo@gmail.com"}, 
                       {"nome":"nicolas",
@@ -46,7 +46,7 @@ lista_dicionarios = [{"nome":"paulo",
                         "idade":40,
                         "email":"zerodri1984@yahoo.com"}]
 
-nome_ordenados = []
+nome_ordenados: list = []
 
 for dicionario in lista_dicionarios:
     nome_ordenados.append((dicionario["nome"]))
@@ -58,9 +58,9 @@ print(sorted(nome_ordenados))
 
 print('Exercicio 9 - Agregação de Dados')
 
-gastos_mes_janeiro = [100.0, 200.0, 75.0, 230.50, 24.33, 48.20]
+gastos_mes_janeiro: list = [100.0, 200.0, 75.0, 230.50, 24.33, 48.20]
 
-media_gastos_janeiro = sum(gastos_mes_janeiro) / len(gastos_mes_janeiro)
+media_gastos_janeiro: float = sum(gastos_mes_janeiro) / len(gastos_mes_janeiro)
 
 print(media_gastos_janeiro)
 
@@ -71,14 +71,14 @@ print('Exercicio 10 - Divisão de Dados em Grupos')
 
 import random
 
-lista_valores = []
+lista_valores: list = []
 
 for i in range(5):
     valores = random.randint(1, 11)
     lista_valores.append(valores) 
 
-valores_pares = []
-valores_impares = []
+valores_pares: list = []
+valores_impares: list = []
 
 for valor in lista_valores:
     if valor % 2 == 0:
@@ -96,7 +96,7 @@ print(valores_impares)
 
 print('Exercicio 11 - Atualização de Dados')
 
-produtos = [{"nome":"Martelo de Unha 20mm Tramontina", "valor":29.00},
+produtos: list = [{"nome":"Martelo de Unha 20mm Tramontina", "valor":29.00},
             {"nome":"Broca para Concreto 6x100mm", "valor":11.49},
             {"nome":"Lixa para Madeira e Massa Grão 80 ", "valor":3.20},
             {"nome":"Tinta Impermeabilizante Emborrachada Branca Fosca 18L", "valor":474.90}]
@@ -113,8 +113,8 @@ print(produtos[0])
 
 print('Exercicio 12 - Fusão de Dicionários')
 
-clientes_1 = {'John': 15, 'Rick': 10, 'Misa' : 12 }
-clientes_2 = {'Bonnie': 18,'Rick': 20,'Matt' : 16 }
+clientes_1: dict = {'John': 15, 'Rick': 10, 'Misa' : 12 }
+clientes_2: dict = {'Bonnie': 18,'Rick': 20,'Matt' : 16 }
 clientes_1.update(clientes_2)
 print('Atualizando Dicionario:')
 print(clientes_1)
@@ -124,7 +124,7 @@ print(clientes_1)
 
 print('Exercicio 13 - Filtragem de Dados em Dicionário')
 
-catalogo = {"calça":50,  
+catalogo: dict = {"calça":50,  
            "camiseta":200, 
            "tenis":34,
            "jaqueta":15, 
@@ -137,7 +137,7 @@ print(catalogo)
 
 a = (catalogo.items())
 
-itens_em_estoque = []
+itens_em_estoque: list = []
 
 for item in a:
     if item[1] > 0:
@@ -150,7 +150,7 @@ print(f"Os itens disponiveis em estoque são: {itens_em_estoque}")
 
 print('Exercicio 14 - Extração de Chaves e Valores')
 
-catalogo = {"calça":50,  
+catalogo: dict = {"calça":50,  
            "camiseta":200, 
            "tenis":34,
            "jaqueta":15, 
@@ -159,8 +159,8 @@ catalogo = {"calça":50,
            "cachicol":0, 
            }
 
-itens = []
-quantidades = []
+itens: list = []
+quantidades: list = []
 
 a = (catalogo.items())
 
@@ -176,9 +176,9 @@ print(quantidades)
 
 print('Exercicio 15 - Contagem de Frequência de Itens')
 
-palavra = "verdade"
+palavra: str = "verdade"
 
-contagem_letras = {}
+contagem_letras: dict = {}
 
 for letra in palavra:
     if letra in contagem_letras:
