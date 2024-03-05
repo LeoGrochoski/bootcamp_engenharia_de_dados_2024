@@ -15,15 +15,20 @@ print(numeros_somados)
 valor = int(input("Digite um valor para verificação se é primo: "))
 
 def verificador_primo(numero: int) -> int:
-    if numero > 1 and numero / 1 == numero and numero % numero == 0:
-        print("Numero Primo")
-    else:
-        print("Não é um numero primo")
-    
+    for i in range(2,numero):
+        if (numero%i) == 0:
+            return False
+        return True
+
 numero_primo = verificador_primo(valor)
 
-#Desenvolva uma função que receba uma string como argumento e retorne essa string revertida.
+if numero_primo == True:
+    print(f"O numero: {valor} é primo")
+else:
+    print(f"O numero: {valor} não é primo")
 
-#Implemente uma função que receba dois argumentos: uma lista de números e um número. A função deve retornar todas as combinações de pares na lista que somem ao número dado.
+# Desenvolva uma função que receba uma string como argumento e retorne essa string revertida.
 
-#Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas
+# Implemente uma função que receba dois argumentos: uma lista de números e um número. A função deve retornar todas as combinações de pares na lista que somem ao número dado.
+
+# Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas
