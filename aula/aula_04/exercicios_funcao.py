@@ -29,7 +29,13 @@ else:
 
 # Exercicio 18 - Desenvolva uma função que receba uma string como argumento e retorne essa string revertida.
 
+txt = input("Digite uma palavra: ")
 
+def inversor_string(palavra: str) -> str:
+    return palavra[::-1]
+
+texto_invertido = inversor_string(txt)
+print(texto_invertido)
 
 # Exercicio 19 - Implemente uma função que receba dois argumentos: uma lista de números e um número.
 # A função deve retornar todas as combinações de pares na lista que somem ao número dado.
@@ -60,13 +66,12 @@ print(resultado2)
 
 # Exercicio 20 - Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas.
 
-alunos: dict = {"aluno_01":"Leonardo", "aluno_02":"Jose", "aluno_03":"Paulo", "aluno_04":"Kleber", "aluno_05":"Felipe"}
+alunos: dict = {"aluno_02":"Jose","aluno_01":"Leonardo", "aluno_05":"Felipe", "aluno_03":"Paulo", "aluno_06":"Mateus", "aluno_04":"Kleber"}
 ordem_alunos: list = [] 
 
-# def ordenador(dicionario: dict):
-    
-    
-    
-    
-for i in alunos:
-    print(i)
+def ordenador(dicionario: dict):
+    dicionario_ordenado = dict(sorted(dicionario.items()))   
+    return dicionario_ordenado
+
+print(ordenador(alunos))
+

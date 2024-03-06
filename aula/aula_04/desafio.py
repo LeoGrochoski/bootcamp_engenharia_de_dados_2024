@@ -1,46 +1,65 @@
-# Aula 4
+# Desafio Aula 4
 
-while True:
-    nome: str = input("Digite seu nome: ")
-    if nome.isalpha() and len(nome) == 0:
-        raise ValueError('Erro: O nome não pode estar em branco')
-    elif nome.isalpha() and len(nome) >= 2:
-        print(f'Nome Registrado: {nome}')
-        break
+# Inclui uma função para as validações de nome e salario, 
+# É feito uma validação com try-except na função e nome 
+# fora da função fica o imput do nome e ele é incluido como parametro da função ao chama-la
+
+def validacao_nome() -> str:
+    while True:
+        try:
+            nome: str = input("Digite o nome: ")
+            if nome.strip().isalpha() and len(nome.strip()) >= 2:
+                return nome
+            else:
+                raise ValueError('Erro: Digite um nome válido')
+        except ValueError as e:
+            print(e)
+
+nome_valido = validacao_nome()
+print("Nome Registrado")
+
+def validacao_salario() -> float:
+    while True:
+        try:
+            salario: float = float(input("Digite o valor do seu salario: "))
+            if salario > 0:
+                return salario
+            else:
+                raise ValueError('Erro: Digite um valor positivo')
+        except ValueError:
+            print("Não foi possivel efetuar a conversão de tipo de dados")
+            
+salario_valido = validacao_salario()
+print("Salario Registrado")
+
+def validacao_bonus() -> float:
+    while True:
+        try:
+            bonus_perc: float = float(input("Digite a porcentagem do seu bonus recebido: "))
+            if bonus_perc > 0:
+                return bonus_perc
+            else:
+                raise ValueError('Erro: A porcentagem do bonus não pode ser negativa')
+        except ValueError: 
+            print('Erro: Digite um valor de bonus valido')
+
+bonus_valido = validacao_bonus()
+print(f"Bonus Registrado")    
+
+def calc_bonus() -> float:
+    bonus_perc: float = bonus_valido / 100
+    bonus_fixo: int = 1000
+    bonus: float = bonus_fixo + salario_valido * bonus_perc
+    if bonus < 0:
+        print('Erro de sistema: Problema com sistema, volte mais tarde!')
     else:
-        print('Erro: Digite um nome valido')
+        return bonus
+    
+bonus_calculado = calc_bonus()
+print("Calculo Registrado")
 
-while True:
-    try:
-        salario: float = float(input("Digite o valor do seu salario: "))
-        if salario > 0:
-            print(f'SalarioRegistrado: {salario}')
-            break
-        else:
-            print('Erro: Digite um valor positivo')
-    except:
-        print('Erro: Digite um valor valido')
-
-while True:
-    try:
-        bonus_perc: float = float(input("Digite a porcentagem do seu bonus recebido: "))
-        if bonus_perc < 0:
-            print('Erro: A porcentagem do bonus não pode ser negativa')
-        else:
-            print(f'Bonus Registrado: {bonus_perc}')    
-            break
-    except ValueError: 
-        print('Erro: Digite um valor de bonus valido')
-
-
-bonus_perc: float = bonus_perc / 100
-bonus_fixo: int = 1000
-bonus: float = bonus_fixo + salario * bonus_perc
-
-if bonus < 0:
-    print('Erro de sistema: Problema com sistema, volte mais tarde!')
-
-print(f'Ola {nome}, seja muito bem vindo ao Portal Finanças')
-print(f'Seu salario é de: R$ {salario:.2f}')
-print(f'Seu bonus foi de: R$ {bonus:.2f}')
+def mensagem_usuario(nome: str, salario: float, bonus: float) -> str:
+    return f'''Ola {nome}, seja muito bem vindo ao Portal Finanças'
+                 Seu salario é de: R$ {salario:.2f}
+                 Seu bonus foi de: R$ {bonus:.2f}'''
 
