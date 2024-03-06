@@ -1,8 +1,8 @@
 # Desafio Aula 4
 
-# Inclui uma função para as validações de nome e salario, 
-# É feito uma validação com try-except na função e nome 
-# fora da função fica o imput do nome e ele é incluido como parametro da função ao chama-la
+# Inclui funções para as validações de nome e salario, bonus e o calculo do bonus, 
+# chamamos função por função para prosseguir no sistema.
+# Inclui type hint nas variaveis como boa pratica de codigo.
 
 def validacao_nome() -> str:
     while True:
