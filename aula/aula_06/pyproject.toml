@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "aula-06"
+version = "0.1.0"
+description = ""
+authors = ["LeoGrochoski <leogrochoski10@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+blue = "^0.9.1"
+taskipy = "^1.12.2"
+pre-commit = "^3.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.taskipy.tasks]
+format = """
+isort main.py
+black main.py
+flake8 main.py
+"""
