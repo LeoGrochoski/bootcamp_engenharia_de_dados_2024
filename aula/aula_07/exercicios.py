@@ -109,3 +109,14 @@ print(calc_desvio_padrao(notas))
 # print(f"O valor do Desvio Padrão da lista: {notas} é de {dp}")
 
 # Exercicio 6 - Encontrar Valores Ausentes em uma Sequência.
+
+sequencia = [0, 1, 2, 5, 6, 8, 9]
+
+
+def encontra_valores_faltantes(list_valores: list) -> list:
+    # valores_ausentes_str = str(lista_valores)
+    val_ausentes = list(set(range(max(list_valores) + 1)) - set(list_valores))
+    return val_ausentes
+
+
+print(encontra_valores_faltantes(sequencia))
