@@ -1,0 +1,20 @@
+Parâmetros e Argumentos
+
+Parâmetros são as variáveis listadas nos parênteses na definição da função. Eles são como placeholders para os dados que a função irá processar.
+Argumentos são os valores reais passados para a função quando ela é chamada.
+
+def soma(a, b):
+    return a + b
+
+Palavras-chave importantes
+
+def: inicia a definição de uma função.
+return: é usado para retornar um valor da função. Se omitido, a função retorna None por padrão.
+pass: pode ser usado como um placeholder para uma função vazia, significando "nada".
+
+Chamando Funções
+
+Para chamar uma função, use o nome da função seguido por parênteses contendo os argumentos necessários.
+
+resultado = soma(5, 3)
+print(resultado)  # Saída: 8
