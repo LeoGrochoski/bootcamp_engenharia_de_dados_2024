@@ -29,7 +29,6 @@ elif celcius >= 18 and celcius <= 26:
 else:
     categoria = ('Baixa')
 
-
 print(f'A temperatura inputada: {celcius}° é categorizada como: {categoria}')
 
 # Exercício 3 - Filtragem de Logs por Severidade
@@ -66,7 +65,7 @@ while True:
         print('Idade valida')
         break
     else:
-        print('Dados invalidos - Idade valida entre 18 a 65 anos')
+        print('Dados invalidos - Digite uma idade valida entre 18 a 65 anos')
 
 cond = True
 while cond:

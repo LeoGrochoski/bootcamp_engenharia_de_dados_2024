@@ -15,10 +15,12 @@ print(numeros_somados)
 valor = int(input("Digite um valor para verificação se é primo: "))
 
 def verificador_primo(numero: int) -> int:
+    if numero <= 1:
+        return False
     for i in range(2,numero):
         if (numero%i) == 0:
             return False
-        return True
+    return True
 
 numero_primo = verificador_primo(valor)
 

@@ -158,16 +158,6 @@ print('Exercicio 1 - Verificador de operações AND')
 x = input('Digite a primeira expressão bool: ')
 y = input('Digite a segunda expressão bool: ')
 
-if x == 'True':
-    x = True
-else: 
-    x = False
-
-if y == 'True': 
-    y = True
-else:
-    y = False
-
 resultado_and = x and y
 print(f'O resultado das expressões com AND é: {resultado_and}')
 

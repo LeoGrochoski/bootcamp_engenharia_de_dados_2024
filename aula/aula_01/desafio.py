@@ -4,7 +4,7 @@
 
 nome = input("Digite seu nome: ")
 salario = float(input("Digite o valor do seu salario: "))
-bonus_perc = float(input("Digite a porcentagem do seu bonus recebido: "))
+bonus_perc = float(input("Digite a porcentagem do seu bonus recebido (0 a 100): "))
 
 bonus_perc = bonus_perc / 100
 
