@@ -51,5 +51,12 @@ Assim imaginei poder processar o arquivo em parquet de forma mais rapida que ant
 
 E o resultado realmente foi melhor do que o anterior, sendo processado em 314.06 segundos, que seria algo em torno de 05:23, Ou seja uma redução de mais de 3 minutos e 27 segundos que representa uma diminuição de mais de 39%.
 
-**OBS**: Tanto o codigo para gerar o arquivo parquet quanto o código para processar o arquivo estão no commit.
+**OBS**: 
+
+- Tanto o codigo para gerar o arquivo parquet quanto o código para processar o arquivo estão no commit
+
+- Caso baixe e não tenha arquivos na pasta isso ocorre, pois o projeto se trata de um submodule e para baixar o conteúdo do submódulo precisa rodar o comando a abaixo: 
+
+    - ```git submodule update --init --recursive```
+
 
